@@ -10,9 +10,9 @@
     - ansible
     live: yes
     tools:
-    ci: jenkins
-    cloud: aws
-    containerization: docker
+      ci: jenkins
+      cloud: aws
+      containerization: docker
   tasks:
   - name: course details
     ansible.builtin.debug:
