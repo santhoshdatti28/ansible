@@ -5,10 +5,10 @@
     greet: "play"
   # vars_files:
   # - vars.yml
-  vars_prompt:
-  - name: greet
-    prompt: please enter the value
-    private: false
+  # vars_prompt:
+  # - name: greet
+  #   prompt: please enter the value
+  #   private: false
   tasks:
   - name: print the variable
     # vars:
