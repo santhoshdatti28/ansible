@@ -1,8 +1,8 @@
 - name: condtions
   hosts: local
   connection: local
-  # vars:
-  #   my_number: 15
+  vars:
+    my_number: 15
   tasks:
   - name: check the number
     ansible.builtin.debug:
