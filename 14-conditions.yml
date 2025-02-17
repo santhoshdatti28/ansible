@@ -2,7 +2,7 @@
   hosts: local
   connection: local
   vars:
-    my_number= 15
+    my_number: 15
   tasks:
   - name: check the number
     ansible.buitlin.debug:
