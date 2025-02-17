@@ -2,6 +2,11 @@
   hosts: web
   become: yes
   tasks:
+  - name: stopping nginx
+    ansible.builtin.service:
+      name: nginx
+      state: stopped
+      disabled: yes
   - name: installing httpd
     ansible.builtin.package:
       name: httpd
