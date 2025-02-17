@@ -3,15 +3,15 @@
   connection: local
   vars:
     greet: "play"
-  # vars_files:
-  # - vars.yml
+  vars_files:
+  - vars.yml
   vars_prompt:
   - name: greet
     prompt: please enter the value
     private: false
   tasks:
   - name: print the variable
-    vars:
-      greet: task
+    # vars:
+    #   greet: task
     ansible.builtin.debug:
       msg: "hello from {{greet}}"
