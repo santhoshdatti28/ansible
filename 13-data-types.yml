@@ -1,0 +1,19 @@
+- name: data types
+  hosts: local
+  connection: ssh
+  vars:
+    course: devops
+    duration: 120
+    topics:
+    - linux
+    - shell
+    - ansible
+    live: yes
+    tools:
+      ci: jenkins
+      cloud: aws
+      containerization: docker
+  tasks:
+  - name: course details
+    ansible.builtin.debug:
+      msg: " course name is {{course}}, duration is {{duration}}, topics are {{topics}}, is it live {{live}} and tools covered are {{tools}}"
