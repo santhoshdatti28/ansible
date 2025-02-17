@@ -1,14 +1,14 @@
-- name: varibales from promt
+- name: varibales from prompt
   hosts: local
   connection: local
-  vars_promt:
+  vars_prompt:
   - name: course
-    promt: please enter course name
+    prompt: please enter course name
     private: yes #confidentail data
   - name: duration
-    promt: please enter duration of the course
+    prompt: please enter duration of the course
   - name: trainer
-    promt: please enter trainer name
+    prompt: please enter trainer name
   tasks:
   - name: course info
     ansible.builtin.debug:
