@@ -1,0 +1,17 @@
+- name: variables
+  hosts: local
+  connection: local
+  vars:
+    name: santhosh
+    company: accenture
+    role: "devops engineer"
+  tasks:
+  - name: my details
+    ansible.builtin.debug:
+      msg: "my name is {{name}}, working in {{company}} as a {{role}}"
+  tasks:
+  - name: my details
+    vars:
+      role: dba
+    ansible.builtin.debug:
+      msg: "my name is {{name}} was worked as {{role}} in {{company}}"
