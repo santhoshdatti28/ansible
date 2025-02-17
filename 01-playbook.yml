@@ -1,0 +1,5 @@
+- name: ping
+  hosts: 44.211.165.12
+  - name: ping the server
+    ansible.builtin.ping:
+    
