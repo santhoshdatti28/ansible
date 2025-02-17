@@ -2,13 +2,13 @@
   hosts: local
   connection: local
   vars:
-    name: santhosh
+    my_name: santhosh
     company: accenture
     role: "devops engineer"
   tasks:
   - name: my details
     ansible.builtin.debug:
-      msg: "my name is {{name}}, working in {{company}} as a {{role}}"
+      msg: "my name is {{my_name}}, working in {{company}} as a {{role}}"
   tasks:
   - name: my details
     vars:
