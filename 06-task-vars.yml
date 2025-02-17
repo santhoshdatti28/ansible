@@ -4,12 +4,12 @@
   vars:
     my_name: santhosh
     company: accenture
-    role: "devops engineer"
+    role: devops engineer
   tasks:
-  - name: my details
+  - name: course details
     ansible.builtin.debug:
       msg: "my name is {{my_name}}, working in {{company}} as a {{role}}"
-  tasks:
+  
   - name: my details
     vars:
       role: dba
