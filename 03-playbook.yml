@@ -6,7 +6,7 @@
     ansible.builtin.service:
       name: nginx
       state: stopped
-      disabled: yes
+      enabled: no
   - name: installing httpd
     ansible.builtin.package:
       name: httpd
