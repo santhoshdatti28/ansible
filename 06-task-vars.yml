@@ -14,4 +14,4 @@
     vars:
       role: dba
     ansible.builtin.debug:
-      msg: "my name is {{name}} was worked as {{role}} in {{company}}"
+      msg: "my name is {{my_name}} was worked as {{role}} in {{company}}"
