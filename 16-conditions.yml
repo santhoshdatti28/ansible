@@ -3,13 +3,14 @@
   connection: local
   tasks:
   - name: install and run niginx
-    ansible.builtin.package:
+    ansible.builtin.dnf:
       name: nginx
       state: present
   
     when: ansible_os_family = "RedHat"
+
   - name: install and run httpd
-    ansible.builtin.packge:
+    ansible.builtin.apt:
       name: httpd
       state: present
     when: ansible_os_family = "Debian"
