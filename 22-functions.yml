@@ -1,0 +1,11 @@
+- name: functions
+  hosts: local
+  connection: local
+  vars:
+    course:
+      course_name: devops
+      trainer: siva
+  tasks:
+  - name: convert map to list
+    ansible.builtin.debug:
+     msg: " course info {{course | dict2items}}"
