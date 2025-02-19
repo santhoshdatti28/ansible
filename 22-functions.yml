@@ -21,3 +21,9 @@
       name: "SANTHOSH KUMAR DATTI"
     ansible.builtin.debug:
       msg: "hello my name is {{name | lower}}"
+
+  - name: print min and max number
+    vars:
+     numbers: [100,200,300,500]
+    ansible.builtin.debug:
+      msg: "small number is {{numbers | min}} big number is {{numbers | max}}"
