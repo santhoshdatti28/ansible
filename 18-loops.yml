@@ -1,0 +1,13 @@
+- name: loops
+  hosts: local
+  connection: local
+  tasks:
+  - name: installing multiple tools
+    ansible.builtin.package:
+      name: {{item}}
+      state: present
+      state: started
+    loop:
+    - mysql
+    - gcc
+    - httpd
