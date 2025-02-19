@@ -4,7 +4,7 @@
   tasks:
   - name: installing multiple tools
     ansible.builtin.package:
-      name: {{item}}
+      name: "{{item}}"
       state: present
       state: started
     loop:
