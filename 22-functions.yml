@@ -9,3 +9,12 @@
   - name: convert map to list
     ansible.builtin.debug:
      msg: " course info {{course | dict2items}}"
+    
+  - name: convert list to mpa
+    vars:
+      topics:
+      - linux
+      - ansible
+      - shell
+    ansible.builtin.debug:
+      msg: "tools are {{topics | items2dict}}"
