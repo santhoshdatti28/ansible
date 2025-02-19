@@ -3,5 +3,5 @@
   connection: ssh
   tasks:
   - name: undefined variable
-    ansible.buitlin.debug:
+    ansible.builtin.debug:
       msg: "hello {{ person | default('santhosh')}}"
