@@ -32,4 +32,4 @@
     vars:
       ip: "23.40.30.10" #wrong ip
     ansible.builtin.debug:
-      msg: "{{ip | ansible.utils.ipaddr}}"
+      msg: "{{ip | ansible.utils.ip_address}}"
