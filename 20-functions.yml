@@ -1,0 +1,7 @@
+- name: functions
+  hosts: local
+  connection: ssh
+  tasks:
+  - name: undefined variable
+    ansible.buitlin.debug:
+      msg: "hello {{ person | default('santhosh')}}"
