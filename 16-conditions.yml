@@ -1,0 +1,15 @@
+- name: install nginx
+  hosts: local
+  connection: local
+  tasks:
+  - name: install and run niginx
+    ansible.builtin.package:
+      name: nginx
+      state: present
+      state: started
+  
+    when: ansible_os_family= "RedHat"
+  - name: install and run httpd
+    ansible.builtin.packge:
+      name: httpd
+      state: present
