@@ -1,0 +1,9 @@
+- name: functions
+  hosts: local
+  connection: local
+  vars:
+    fruits: "apple, banana, orange"
+  tasks:
+  - name: convert string to list
+    ansible.builtin.debug:
+      msg: " fruits are | split(',')"
