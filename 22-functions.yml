@@ -10,11 +10,8 @@
     ansible.builtin.debug:
      msg: " course info {{course | dict2items}}"
     
-  - name: convert list to mpa
+  - name: convert lower to upper
     vars:
-      topics:
-      - linux
-      - ansible
-      - shell
+      name: "santhosh kumar datti"
     ansible.builtin.debug:
-      msg: "tools are {{topics | items2dict}}"
+      msg: "my name is {{name | upper}}"
