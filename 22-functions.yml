@@ -15,3 +15,9 @@
       name: "santhosh kumar datti"
     ansible.builtin.debug:
       msg: "my name is {{name | upper}}"
+
+  - name: convert upper to lower
+    vars:
+      name: "SANTHOSH KUMAR DATTI"
+    ansible.builtin.debug:
+      msg: "hello my name is {{name | lower}}"
