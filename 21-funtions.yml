@@ -6,4 +6,4 @@
   tasks:
   - name: convert string to list
     ansible.builtin.debug:
-      msg: " fruits are | split(',')"
+      msg: " fruits are {{fruits | split(',')}}"
