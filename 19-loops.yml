@@ -1,0 +1,12 @@
+- name: loops
+  hosts: local
+  connection: local
+  tasks:
+  - name: installing multiple tools
+    ansible.builtin.package:
+      name: "{{item.name}}"
+      state: "{{item.state}"
+  loop:
+  - {- name: 'git', state: 'present'}
+  - { - name: 'nginx', state: 'present'}
+  - name { name: 'git', state: 'absent'}
