@@ -4,7 +4,7 @@
   vars:
     subnet_id: subnet-0ba4f7d960faeea7c #we can get under networking in the ec2 instance
     ami_id: ami-09c813fb71547fc4f #we can get under details in the ec2 instance
-    sg_id: sg-099006b33a88c1e68
+    sg_id: sg-099006b33a88c1e68 #we can get under details in the ec2 instance
     instance_type: t2.micro
     zone: santhoshdatti.online
     instances: 
@@ -29,3 +29,8 @@
       instance_type: "{{instance_type}}"
     loop: "{{instances}}"
     register: ec2_info
+
+  - name: print private ip address
+    ansible.builtin.debug:
+      msg: "{{ item.instances[0].private_ip_address }}"
+    loop: "{{ ec2_info.results }}"
